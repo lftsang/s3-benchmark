@@ -64,6 +64,11 @@ executable s3-benchmark.ubuntu will run the benchmark testing without having to 
 
 Otherwise, to build the s3-benchmark executable, you must issue this following command:
 /usr/bin/go build s3-bechmark.go
+
+#go mod init s3bench
+#go mod tidy
+#go build s3-bechmark.go
+
  
 # Command Line Arguments
 Below are the command line arguments to the program (which can be displayed using -help):
