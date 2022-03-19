@@ -62,12 +62,20 @@ LICENSE	README.md		s3-benchmark.go	s3-benchmark.ubuntu
 If the test is being run on Ubuntu version 16.04 LTS (the current long term release), the binary
 executable s3-benchmark.ubuntu will run the benchmark testing without having to build the executable. 
 
+The pre-build from original git ,s3-benchmark.ubuntu ,will encounter the object upload problem , due to the S3 standard has been changed a bit. 
+<br>
+"Upload status 403 Forbidden: resp: &{Status:403 Forbidden StatusCode:403 Proto:HTTP/1.1 ProtoMajor:1 ProtoMinor:1 Header:map[Content-Length:[188] X-Amz-Request-Id:[tx00000bebe950da96010e4-006235d68c-4050-my-store] Accept-Ranges:[bytes] Content-Type:[application/xml] Date:[Sat, 19 Mar 2022 13:11:40 GMT] Connection:[Keep-Alive]] Body:0xc43ffd2000 ContentLength:188 TransferEncoding:[] Close:false Uncompressed:false Trailer:map[] Request:0xc43fd75100 TLS:<nil>}"
+
 Otherwise, to build the s3-benchmark executable, you must issue this following command:
 /usr/bin/go build s3-bechmark.go
 
-#go mod init s3bench
+#go mod init s3bench 
+<br>
+
 #go mod tidy
+<br>
 #go build s3-bechmark.go
+<br>
 
  
 # Command Line Arguments
